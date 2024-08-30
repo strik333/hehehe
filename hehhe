@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Question</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fce4ec;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #ec407a;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ec407a;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #ffffff;
+        }
+        .yes {
+            background-color: #8e24aa;
+        }
+        .no {
+            background-color: #d32f2f;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Can I bite your lips?</h1>
+        <button class="yes" onclick="showMessage('pervert')">Yes</button>
+        <button class="no" onclick="showMessage('notAvailable')">No</button>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        function showMessage(type) {
+            var messageDiv = document.getElementById('message');
+            if (type === 'pervert') {
+                messageDiv.textContent = 'Pervertttt';
+            } else if (type === 'notAvailable') {
+                messageDiv.textContent = 'Option not available';
+            }
+        }
+    </script>
+</body>
+</html>
